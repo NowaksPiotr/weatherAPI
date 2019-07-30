@@ -5,7 +5,12 @@
 .general{
     height: 100%;
     grid-column: 1/2;
+    border-right: 1px solid black;
 }
 .forecast__chart{
     grid-column: 2/3;
+}
+
+main{
+    height: 100vh;
 }

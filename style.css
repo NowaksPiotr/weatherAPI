@@ -1,0 +1,11 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.general{
+    height: 100%;
+    grid-column: 1/2;
+}
+.forecast__chart{
+    grid-column: 2/3;
+}

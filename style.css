@@ -31,8 +31,11 @@
         outline: none;
         border: 1px solid black;
     }
+    .city__name__input{
+        width: 10em;
+    }
     .check__it__out{
-        margin-left: .5em;
+        margin-left: .2em;
         padding-right: 1em;
         background-color: transparent;
     }

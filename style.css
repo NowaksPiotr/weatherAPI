@@ -23,12 +23,17 @@
     form{
         margin: 0;
     }
-    .city__name__input{
+    .city__name__input, .check__it__out{
         border-radius: 25px;
         padding-left: 1em;
         padding-top: .2em;
         padding-bottom: .2em;
         outline: none;
         border: 1px solid black;
+    }
+    .check__it__out{
+        margin-left: .5em;
+        padding-right: 1em;
+        background-color: transparent;
     }
 }

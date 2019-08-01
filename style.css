@@ -15,8 +15,20 @@
         letter-spacing: .3em;
     }
     .city_check{
+        margin: 0;
         display: flex;
-        padding: 0.5em;
+        padding-top: 0.5em;
         justify-content: center;
+    }
+    form{
+        margin: 0;
+    }
+    .city__name__input{
+        border-radius: 25px;
+        padding-left: 1em;
+        padding-top: .2em;
+        padding-bottom: .2em;
+        outline: none;
+        border: 1px solid black;
     }
 }

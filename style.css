@@ -1,12 +1,22 @@
-/* Media queries for all up to 768px */
+/* Media queries for all up to 567px */
 @media (max-width: 567px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
     .wrapper{ 
     }
     .site__name{
         display: flex;
         justify-content: center;
+        border-bottom: 1px solid darkblue;
     }
-    .general{
-        border: none;
+    .name{
+        letter-spacing: .3em;
+    }
+    .city_check{
+        display: flex;
+        padding: 0.5em;
+        justify-content: center;
     }
 }

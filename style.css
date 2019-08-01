@@ -1,16 +1,12 @@
-.wrapper{
-    display: grid;
-    grid-template-columns: 30% 70%;
-}
-.general{
-    height: 100%;
-    grid-column: 1/2;
-    border-right: 1px solid black;
-}
-.forecast__chart{
-    grid-column: 2/3;
-}
-
-main{
-    height: 100vh;
+/* Media queries for all up to 768px */
+@media (max-width: 567px){
+    .wrapper{ 
+    }
+    .site__name{
+        display: flex;
+        justify-content: center;
+    }
+    .general{
+        border: none;
+    }
 }

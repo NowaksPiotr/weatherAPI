@@ -4,6 +4,8 @@ const check_btn = document.getElementById('check_btn');
 
 check_btn.addEventListener('click', function(e){
     let chosenCity = document.querySelector('.city__name__input').value ? document.querySelector('.city__name__input').value : 'Dziala';
+    let degrees = document.getElementById('temperature').value;
+    
 })
 // let url = 'https://api.openweathermap.org/data/2.5/forecast?q=Poznan&lang=pl&cnt=5&units=metric&appid=' + key; // test url
 

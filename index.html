@@ -18,10 +18,11 @@
                 <div class="city_check">
                     <form>
                         <input type="text" class="city__name__input" placeholder="City name..." >
-                        <input type="radio" name="temps" id="fahrenheit">
-                        <label for="fahrenheit">F</label>
-                        <input type="radio" name="temps" id="celsius" checked>
-                        <label for="celsius">C</label>
+                        <select name="temps" id="temperature">
+                            <option value="metric" disabled selected>Choose</option>
+                            <option value="imperial">Fahrenheit</option>
+                            <option value="metric">Celsius</option>
+                        </select>
                         <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
                     </form>
                 </div>

@@ -38,4 +38,7 @@
         padding-right: 1em;
         background-color: transparent;
     }
+    .city__name__wrapper{
+        color: red;
+    }
 }

@@ -20,53 +20,68 @@ function showResults(data, degrees) {
             currentWeather.removeChild(currentWeather.firstChild);
         }
 
-            let degreeUnits = degreeUnit(degrees);
-            let cityName = data.city.name;
-            
-            // Creating HTML elements and setting their attributes for styling //
+        let degreeUnits = degreeUnit(degrees);
+        let cityName = data.city.name;
 
-            let chosenCityElement = document.createElement('h2');
-            chosenCityElement.setAttribute('class', 'chosen__city');
-            
-            let cityNameWrapperElement = document.createElement('div');
-            cityNameWrapperElement.setAttribute('class', 'city__name__wrapper');
-            
-            let tempAndIconWrapperElement = document.createElement('div');
-            tempAndIconWrapperElement.setAttribute('class', 'temp_and_icon_wrapper');
-            
-            let tempElement = document.createElement('p');
-            tempElement.setAttribute('class', 'temp');
-            
-            let iconImgElement = document.createElement('img');
-            iconImgElement.setAttribute('class', 'icon');
-            iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
-            
-            let humidityWrapperElement = document.createElement('div');
-            humidityWrapperElement.setAttribute('class', 'humidity_wrapper');
+        // ***** Creating HTML elements and setting their attributes for styling **** //
 
-            let humidityElement = document.createElement('p');
-            humidityElement.setAttribute('class', 'humidity');
+        let chosenCityElement = document.createElement('h2');
+        chosenCityElement.setAttribute('class', 'chosen__city');
 
-            let pressureWrapperElement = document.createElement('div');
-            pressureWrapperElement.setAttribute('class', 'pressure_wrapper');
+        let cityNameWrapperElement = document.createElement('div');
+        cityNameWrapperElement.setAttribute('class', 'city__name__wrapper');
 
-            let pressureElement = document.createElement('p');
-            pressureElement.setAttribute('class', 'pressure');
-            
-            let minMaxTempWrapperElement = document.createElement('div');
-            minMaxTempWrapperElement.setAttribute('class', 'tmax_and_tmin_wrapper');
+        let tempAndIconWrapperElement = document.createElement('div');
+        tempAndIconWrapperElement.setAttribute('class', 'temp_and_icon_wrapper');
 
-            let tMinElement = document.createElement('p');
-            tMinElement.setAttribute('class', 'tmin');
+        let tempElement = document.createElement('p');
+        tempElement.setAttribute('class', 'temp');
 
-            let tMaxElement = document.createElement('p');
-            tMaxElement.setAttribute('class', 'tmax');
-            
+        let iconImgElement = document.createElement('img');
+        iconImgElement.setAttribute('class', 'icon');
+        iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
 
-            currentWeather.append(cityNameWrapperElement);
-            cityNameWrapperElement.append(chosenCityElement);
-            chosenCityElement.append(iconImgElement);
+        let humidityWrapperElement = document.createElement('div');
+        humidityWrapperElement.setAttribute('class', 'humidity_wrapper');
 
+        let humidityElement = document.createElement('p');
+        humidityElement.setAttribute('class', 'humidity');
+
+        let pressureWrapperElement = document.createElement('div');
+        pressureWrapperElement.setAttribute('class', 'pressure_wrapper');
+
+        let pressureElement = document.createElement('p');
+        pressureElement.setAttribute('class', 'pressure');
+
+        let minMaxTempWrapperElement = document.createElement('div');
+        minMaxTempWrapperElement.setAttribute('class', 'tmax_and_tmin_wrapper');
+
+        let tMinElement = document.createElement('p');
+        tMinElement.setAttribute('class', 'tmin');
+
+        let tMaxElement = document.createElement('p');
+        tMaxElement.setAttribute('class', 'tmax');
+
+        // ************************************************************************** //
+        // ******************** Printing data on screen ***************************** //
+        
+        currentWeather.append(cityNameWrapperElement);
+        currentWeather.append(tempAndIconWrapperElement);
+        currentWeather.append(humidityWrapperElement);
+        currentWeather.append(minMaxTempWrapperElement);
+
+        cityNameWrapperElement.append(chosenCityElement);
+        chosenCityElement.append(cityName);
+
+        tempAndIconWrapperElement.append(tempElement);
+        tempAndIconWrapperElement.append(iconImgElement);
+
+        humidityWrapperElement.append(humidityElement);
+
+        minMaxTempWrapperElement.append(tMinElement);
+        minMaxTempWrapperElement.append(tMaxElement);
+        
+        // ************************************************************************** //
     }
 
 }

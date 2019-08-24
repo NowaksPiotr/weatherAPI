@@ -38,7 +38,29 @@
         padding-right: 1em;
         background-color: transparent;
     }
+    #current__weather{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
     .city__name__wrapper{
-        color: red;
+        grid-column: 1/3;
+        background-color: lightcoral;
+    }
+    .chosen__city{
+        display: flex;
+        justify-content: center;
+    }
+    .temp_and_icon_wrapper{
+        background-color: lightseagreen;
+    }
+    .humidity_wrapper{
+        background-color: limegreen;
+    }
+    .tmax_and_tmin_wrapper{
+        background-color: lightgreen;
+    }
+    .icon{
+        height: 40%;
+        width: 40%;
     }
 }

@@ -9,7 +9,6 @@ window.addEventListener('load', function (params) {
         let degrees = document.getElementById('temperature').value;
         let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=40&units=' + degrees
             + '&appid=' + key;
-        console.log(url);
         fetchForecast(url, degrees);
     });
 
@@ -83,8 +82,8 @@ window.addEventListener('load', function (params) {
             cityNameWrapperElement.append(chosenCityElement);
             chosenCityElement.append(cityName);
 
-            tempAndIconWrapperElement.append(tempElement);
             tempAndIconWrapperElement.append(iconImgElement);
+            tempAndIconWrapperElement.append(tempElement);
 
             humidityWrapperElement.append(humidityElement);
 

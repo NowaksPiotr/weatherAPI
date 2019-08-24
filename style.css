@@ -38,6 +38,9 @@
         padding-right: 1em;
         background-color: transparent;
     }
+
+    /* Current weather section */
+
     #current__weather{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -46,21 +49,37 @@
         grid-column: 1/3;
         background-color: lightcoral;
     }
-    .chosen__city{
+    .chosen__city, .icon_wrapper, .temp, .humidity_wrapper, .tmin, .tmax {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .temp_and_icon_wrapper{
         background-color: lightseagreen;
+        display: grid;
+        grid-template-columns: 60% 40%;
     }
     .humidity_wrapper{
         background-color: limegreen;
     }
     .tmax_and_tmin_wrapper{
+        grid-column: 1/3;
         background-color: lightgreen;
     }
-    .icon{
-        height: 40%;
-        width: 40%;
+    .inner_tmin_tmax_wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
+    .tmin{
+    }
+    .tmax{
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+    }
+
+    /*************************************************************/
 }

@@ -38,6 +38,9 @@ window.addEventListener('load', function (params) {
             let tempElement = document.createElement('p');
             tempElement.setAttribute('class', 'temp');
 
+            let iconWrapperElement = document.createElement('div');
+            iconWrapperElement.setAttribute('class', 'icon_wrapper');
+
             let iconImgElement = document.createElement('img');
             iconImgElement.setAttribute('class', 'icon');
 
@@ -56,6 +59,9 @@ window.addEventListener('load', function (params) {
             let minMaxTempWrapperElement = document.createElement('div');
             minMaxTempWrapperElement.setAttribute('class', 'tmax_and_tmin_wrapper');
 
+            let innerMinMaxTempEl = document.createElement('div');
+            innerMinMaxTempEl.setAttribute('class', 'inner_tmin_tmax_wrapper');
+
             let tMinElement = document.createElement('p');
             tMinElement.setAttribute('class', 'tmin');
 
@@ -69,8 +75,8 @@ window.addEventListener('load', function (params) {
             iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
             tempElement.innerHTML = data.list[0].main.temp + degreeUnits;
             humidityElement.innerHTML = data.list[0].main.humidity + '%';
-            tMinElement.innerHTML = data.list[0].main.temp_min + degreeUnits;
-            tMaxElement.innerHTML = data.list[0].main.temp_max + degreeUnits;
+            tMinElement.innerHTML = 'Min. Temperature: ' + data.list[0].main.temp_min + degreeUnits;
+            tMaxElement.innerHTML = 'Max. Temperature: ' + data.list[0].main.temp_max + degreeUnits;
 
             // ******************** Printing data on screen ***************************** //
 
@@ -82,13 +88,15 @@ window.addEventListener('load', function (params) {
             cityNameWrapperElement.append(chosenCityElement);
             chosenCityElement.append(cityName);
 
-            tempAndIconWrapperElement.append(iconImgElement);
+            tempAndIconWrapperElement.append(iconWrapperElement);
+            iconWrapperElement.append(iconImgElement);
             tempAndIconWrapperElement.append(tempElement);
 
             humidityWrapperElement.append(humidityElement);
 
-            minMaxTempWrapperElement.append(tMinElement);
-            minMaxTempWrapperElement.append(tMaxElement);
+            minMaxTempWrapperElement.append(innerMinMaxTempEl);
+            innerMinMaxTempEl.append(tMinElement);
+            innerMinMaxTempEl.append(tMaxElement);
 
             // ************************************************************************** //
         }

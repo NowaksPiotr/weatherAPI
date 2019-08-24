@@ -11,9 +11,16 @@ check_btn.addEventListener('click', function (e) {
 function showResults(data, degrees) {
     if (data.cod === "200") {
         console.log('Works fine!');
+        console.log(data);
     } else {
         console.log('Not working :(')
     }
+    let test = document.createElement('div');
+    let cityName = document.createElement('h2');
+    cityName.innerHTML = 'test';
+    test.append(cityName);
+    console.log(test);
+
 }
 
 function fetchForecast(url, degrees) {

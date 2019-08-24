@@ -27,17 +27,42 @@ function showResults(data, degrees) {
 
             let chosenCityElement = document.createElement('h2');
             chosenCityElement.setAttribute('class', 'chosen__city');
-            console.log(chosenCityElement);
+            
             let cityNameWrapperElement = document.createElement('div');
             cityNameWrapperElement.setAttribute('class', 'city__name__wrapper');
+            
             let tempAndIconWrapperElement = document.createElement('div');
             tempAndIconWrapperElement.setAttribute('class', 'temp_and_icon_wrapper');
+            
             let tempElement = document.createElement('p');
             tempElement.setAttribute('class', 'temp');
+            
             let iconImgElement = document.createElement('img');
             iconImgElement.setAttribute('class', 'icon');
             iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
             
+            let humidityWrapperElement = document.createElement('div');
+            humidityWrapperElement.setAttribute('class', 'humidity_wrapper');
+
+            let humidityElement = document.createElement('p');
+            humidityElement.setAttribute('class', 'humidity');
+
+            let pressureWrapperElement = document.createElement('div');
+            pressureWrapperElement.setAttribute('class', 'pressure_wrapper');
+
+            let pressureElement = document.createElement('p');
+            pressureElement.setAttribute('class', 'pressure');
+            
+            let minMaxTempWrapperElement = document.createElement('div');
+            minMaxTempWrapperElement.setAttribute('class', 'tmax_and_tmin_wrapper');
+
+            let tMinElement = document.createElement('p');
+            tMinElement.setAttribute('class', 'tmin');
+
+            let tMaxElement = document.createElement('p');
+            tMaxElement.setAttribute('class', 'tmax');
+            
+
             currentWeather.append(cityNameWrapperElement);
             cityNameWrapperElement.append(chosenCityElement);
             chosenCityElement.append(iconImgElement);

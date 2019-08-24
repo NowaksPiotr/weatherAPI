@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +8,57 @@
     <title>Forecast with charts.js</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
     <div class="wrapper">
-    <section class="general">
-        <header class="site__name">
-            <h1 class="name">weatherAPP</h1>
-        </header>
-        <main>
-            <div class="general__wrapper">
-                <div class="city_check">
-                    <form>
-                        <input type="text" class="city__name__input" placeholder="City name..." >
-                        <select name="temps" id="temperature">
-                            <option value="metric" disabled selected>Choose</option>
-                            <option value="imperial">Fahrenheit</option>
-                            <option value="metric">Celsius</option>
-                        </select>
-                        <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
-                    </form>
+        <section class="general">
+            <header class="site__name">
+                <h1 class="name">weatherAPP</h1>
+            </header>
+            <main>
+                <div class="general__wrapper">
+                    <div class="city_check">
+                        <form>
+                            <input type="text" class="city__name__input" placeholder="City name...">
+                            <select name="temps" id="temperature">
+                                <option value="metric" disabled selected>Choose</option>
+                                <option value="imperial">Fahrenheit</option>
+                                <option value="metric">Celsius</option>
+                            </select>
+                            <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
+                        </form>
+                    </div>
+                    <section id="current__weather">
+                        <div class="city__name__wrapper">
+                            <h2 id="chosen__city"></h2>
+                        </div>
+                        <div class="temp_and_icon_wrapper">
+                            <p class="temp">&#8451;</p>
+                            <img src="" alt="Weather icon" class="icon">
+                        </div>
+                        <div class="humidity_wrapper">
+                            <p class="humidity">65%</p>
+                        </div>
+                        <div class="pressure_wrapper">
+                            <p class="pressure">1065hPa</p>
+                        </div>
+                        <div class="tmax_and_tmin_wrapper">
+                            <p class="tmax">35&deg;C</p>
+                            <p class="tmin">20&deg;C</p>
+                        </div>
+                    </section>
                 </div>
-                <div class="city__name__wrapper">
-                    <h2 class="chosen__city"></h2>
-                </div>
-                <div class="temp_and_icon_wrapper">
-                    <p class="temp">25&deg;C</p>
-                    <img src="#" alt="Weather icon" class="icon">
-                </div>
-                <div class="humidity_wrapper">
-                    <p class="humidity">65%</p>
-                </div>
-                <div class="pressure_wrapper">
-                    <p class="pressure">1065hPa</p>
-                </div>
-                <div class="tmax_and_tmin_wrapper">
-                    <p class="tmax">35&deg;C</p>
-                    <p class="tmin">20&deg;C</p>
-                </div>
-            </div>
-        </main>
-    </section>
-    <section class="forecast__chart">
-        <ul>
-            <li>Forecast</li>
-            <li>Chart</li>
-        </ul>
-    </section>
+            </main>
+        </section>
+        <section class="forecast__chart">
+            <ul>
+                <li>Forecast</li>
+                <li>Chart</li>
+            </ul>
+        </section>
     </div>
+    <p id="test"></p>
     <script src="main.js"></script>
 </body>
+
 </html>

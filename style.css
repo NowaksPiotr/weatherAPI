@@ -1,7 +1,7 @@
 html{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%);;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);;
 }
 body{
     height: 100%;
@@ -20,35 +20,39 @@ body{
     .site__name{
         display: flex;
         justify-content: center;
-        border-bottom: 1px solid darkblue;
+        align-items: center;
     }
     .name{
         letter-spacing: .3em;
+        padding: 0;
     }
     .city_check{
         margin: 0;
         display: flex;
-        padding-top: 0.5em;
-        justify-content: center;
-    }
-    form{
-        margin-bottom: 0.5em;
+        padding-top: .5em;
+        margin-bottom: .5em;
+        justify-content: space-around;
     }
     .city__name__input, .check__it__out{
         border-radius: 25px;
         padding-left: 1em;
-        padding-top: .2em;
-        padding-bottom: .2em;
+        padding-top: .4em;
+        padding-bottom: .4em;
         outline: none;
-        border: 1px solid black;
+        border: 1px solid rgb(0,0,0);
     }
     .city__name__input{
         width: 10em;
+        font-size: .5em;
     }
     .check__it__out{
         margin-left: .2em;
         padding-right: 1em;
         background-color: transparent;
+    }
+    #temperature{
+        width: 8em;
+        text-align: center;
     }
 
     /* Current weather section */

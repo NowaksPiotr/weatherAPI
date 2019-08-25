@@ -138,7 +138,7 @@ window.addEventListener('load', function (params) {
                 showResults(fetchdata, degrees)
             })
             .catch(error => {
-                alert('Something went wrong :( Try again!');
+                alert('Something went wrong :( Hope that it is sunny!');
                 console.log(error);
             });
     }

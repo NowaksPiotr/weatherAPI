@@ -49,6 +49,7 @@ body{
         margin-left: .2em;
         padding-right: 1em;
         background-color: transparent;
+        font-weight: bold;
     }
     #temperature{
         width: 8em;
@@ -65,10 +66,10 @@ body{
     }
     .city__name__wrapper{
         grid-column: 1/3;
-        background-color: lightcoral;
+        background-color: rgba(165, 193, 253, 0.5);;
     }
     .chosen__city,
-    .icon_wrapper,
+    .icon_and_icon_wrapper,
     .temp, .humidity_wrapper,
     .tmin, .tmax,
     .wind_speed_wrapper,
@@ -79,8 +80,15 @@ body{
         justify-content: center;
         align-items: center;
     }
+    .temp_and_icon_wrapper,
+    .humidity_wrapper,
+    .tmax_and_tmin_wrapper,
+    .pressure_wrapper,
+    .wind_speed_wrapper{
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
     .temp_and_icon_wrapper{
-        background-color: lightseagreen;
         display: grid;
         grid-template-columns: 50% 50%;
     }
@@ -90,9 +98,6 @@ body{
         height: 80px;
         width: 80px;
     }
-    .humidity_wrapper{
-        background-color: limegreen;
-    }
     .tmax_and_tmin_wrapper{
         grid-column: 1/3;
     }
@@ -100,18 +105,6 @@ body{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-gap: 0.2em;
-    }
-    .tmin{
-        background-color: lightgreen;
-    }
-    .tmax{
-        background-color: lightgreen;
-    }
-    .wind_speed_wrapper{
-        background-color: lightgrey;
-    }
-    .pressure_wrapper{
-        background-color: aquamarine;
     }
     .humidity,
     .tmin,
@@ -136,7 +129,7 @@ body{
         cursor: pointer;
     }
     .forecast_information_wrapper{
-        background-color: bisque;
+        background-color: rgba(56,163,209, 0.5);
     }
     .chart_wrapper{
         background-color: aqua;

@@ -56,7 +56,9 @@
     .temp, .humidity_wrapper,
     .tmin, .tmax,
     .wind_speed_wrapper,
-    .pressure_wrapper{
+    .pressure_wrapper,
+    .forecast_information_wrapper,
+    .chart_wrapper{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,4 +105,10 @@
     }
 
     /*************************************************************/
+    /****************** Forecast and chart links *****************/
+
+    .forecast__and__chart{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 }

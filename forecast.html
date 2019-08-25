@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Forecast with charts.js</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
-    <a href="index.html">Do głównej</a>
-</body>
-</html>
+    <div class="wrapper">
+        <section class="general">
+            <header class="site__name">
+                <h1 class="name">weatherAPP</h1>
+            </header>
+            <main>
+                <div class="general__wrapper">
+                    <div class="city_check">
+                        <form>
+                            <input type="text" class="city__name__input" placeholder="City name...">
+                            <select name="temps" id="temperature">
+                                <option value="metric" disabled selected>Choose</option>
+                                <option value="imperial">Fahrenheit</option>
+                                <option value="metric">Celsius</option>
+                            </select>
+                            <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
+                        </form>
+                    </div>
+                    <a href="index.html">index</a>

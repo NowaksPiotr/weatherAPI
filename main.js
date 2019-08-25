@@ -68,15 +68,23 @@ window.addEventListener('load', function (params) {
             let tMaxElement = document.createElement('p');
             tMaxElement.setAttribute('class', 'tmax');
 
+            let windSpeedWrapperElement = document.createElement('div');
+            windSpeedWrapperElement.setAttribute('class', 'wind_speed_wrapper');
+
+            let windSpeedElement = document.createElement('p');
+            windSpeedElement.setAttribute('class', 'wind_speed');
+
             // ************************************************************************** //
 
             // ************** Adding fetched data to created HTML elements ************** //
 
             iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
             tempElement.innerHTML = data.list[0].main.temp + degreeUnits;
-            humidityElement.innerHTML = data.list[0].main.humidity + '%';
-            tMinElement.innerHTML = 'Min. Temperature: ' + data.list[0].main.temp_min + degreeUnits;
-            tMaxElement.innerHTML = 'Max. Temperature: ' + data.list[0].main.temp_max + degreeUnits;
+            humidityElement.innerHTML = 'humidity' + '<br>' + data.list[0].main.humidity + '%';
+            tMinElement.innerHTML = 'min. temperature' + '<br>' + data.list[0].main.temp_min + degreeUnits;
+            tMaxElement.innerHTML = 'max. temperature ' + '<br>' + data.list[0].main.temp_max + degreeUnits;
+            pressureElement.innerHTML = data.list[0].main.pressure + ' hPa';
+            windSpeedElement.innerHTML = 'Wind speed:' + '<br>' + data.list[0].wind.speed + ' km/h';
 
             // ******************** Printing data on screen ***************************** //
 
@@ -84,6 +92,8 @@ window.addEventListener('load', function (params) {
             currentWeather.append(tempAndIconWrapperElement);
             currentWeather.append(humidityWrapperElement);
             currentWeather.append(minMaxTempWrapperElement);
+            currentWeather.append(pressureWrapperElement);
+            currentWeather.append(windSpeedWrapperElement);
 
             cityNameWrapperElement.append(chosenCityElement);
             chosenCityElement.append(cityName);
@@ -97,6 +107,10 @@ window.addEventListener('load', function (params) {
             minMaxTempWrapperElement.append(innerMinMaxTempEl);
             innerMinMaxTempEl.append(tMinElement);
             innerMinMaxTempEl.append(tMaxElement);
+
+            pressureWrapperElement.append(pressureElement);
+
+            windSpeedWrapperElement.append(windSpeedElement);
 
             // ************************************************************************** //
         }

@@ -69,7 +69,7 @@ body{
         background-color: rgba(165, 193, 253, 0.5);;
     }
     .chosen__city,
-    .icon_and_icon_wrapper,
+    .icon_wrapper,
     .temp, .humidity_wrapper,
     .tmin, .tmax,
     .wind_speed_wrapper,
@@ -149,9 +149,9 @@ body{
   
   @keyframes move {
     0%   { transform: scale(1)   translate(10px, -30px); }
-    38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-    40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
-    78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
-    80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+    38%  { transform: scale(0.6, 1) translate(80vw, 30vh) rotate(160deg); }
+    40%  { transform: scale(0.6, 1) translate(80vw, 30vh) rotate(160deg); }
+    78%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
+    80%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
     100% { transform: scale(1)   translate(10px, -30px); }
   }

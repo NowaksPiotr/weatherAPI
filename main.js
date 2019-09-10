@@ -74,15 +74,17 @@ window.addEventListener('load', function (params) {
             let windSpeedElement = document.createElement('p');
             windSpeedElement.setAttribute('class', 'wind_speed');
 
-            // ************************************************************************** //
-
+            // *************************Ceiling temperatures*************************** //
+            let tempCeiled = Math.ceil(data.list[0].main.temp);
+            let minTempCeiled = Math.ceil(data.list[0].main.temp_min);
+            let maxTempCeiled = Math.ceil(data.list[0].main.temp_max);
             // ************** Adding fetched data to created HTML elements ************** //
 
             iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
-            tempElement.innerHTML = data.list[0].main.temp + degreeUnits;
+            tempElement.innerHTML = tempCeiled + degreeUnits;
             humidityElement.innerHTML = 'humidity' + '<br>' + data.list[0].main.humidity + '%';
-            tMinElement.innerHTML = 'min. temperature' + '<br>' + data.list[0].main.temp_min + degreeUnits;
-            tMaxElement.innerHTML = 'max. temperature ' + '<br>' + data.list[0].main.temp_max + degreeUnits;
+            tMinElement.innerHTML = 'min. temperature' + '<br>' + minTempCeiled + degreeUnits;
+            tMaxElement.innerHTML = 'max. temperature ' + '<br>' + maxTempCeiled + degreeUnits;
             pressureElement.innerHTML = data.list[0].main.pressure + ' hPa';
             windSpeedElement.innerHTML = 'Wind speed:' + '<br>' + data.list[0].wind.speed + ' km/h';
 

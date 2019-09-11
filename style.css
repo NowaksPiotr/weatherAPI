@@ -136,11 +136,14 @@ body{
         display: none;
     }
 }
-.blob {
+/******************** ANIMATIONS BELOW ****************************/
+/******************* Background blob animation *******************/
+/**************** I don't know if I need it... *******************/
+/* .blob {
     position: absolute;
     top: 0;
     left: 0;
-    fill: rgba(255,255,255,0.5);
+    fill: rgba(255,255,255,0.2);
     width: 30vmax;
     z-index: -1;
     animation: move 20s ease-in-out infinite;
@@ -154,4 +157,5 @@ body{
     78%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
     80%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
     100% { transform: scale(1)   translate(10px, -30px); }
-  }
+  } */
+  /******************************************************************/

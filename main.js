@@ -2,21 +2,23 @@ window.addEventListener('load', function (params) {
 
     const key = '174be33436b5ac8a0340d573ab8f6d96';
     const check_btn = document.getElementById('check_btn');
+    const forecastCount = 40;
 
     check_btn.addEventListener('click', function (e) {
         let chosenCity = document.querySelector('.city__name__input').value ? document.querySelector('.city__name__input')
             .value : 'Poznań';
         let degrees = document.getElementById('temperature').value;
-        let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=40&units=' + degrees
+        let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=' + forecastCount + '&units=' + degrees
             + '&appid=' + key;
         fetchForecast(url, degrees);
     });
 
-    function showResults(data, degrees) {
+    function showResults(data, degrees, url) {
         if (data.cod === "200") {
             console.log('Works fine!');
             const currentWeather = document.getElementById('current__weather');
-
+            localStorage.clear();
+            localStorage.setItem('url', url);
             while (currentWeather.firstChild) {
                 currentWeather.removeChild(currentWeather.firstChild);
             }
@@ -137,7 +139,7 @@ window.addEventListener('load', function (params) {
                 return response.json();
             })
             .then(function (fetchdata) {
-                showResults(fetchdata, degrees)
+                showResults(fetchdata, degrees, url)
             })
             .catch(error => {
                 alert('Something went wrong :( Hope that it is sunny!');

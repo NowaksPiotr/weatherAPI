@@ -6,6 +6,7 @@ window.addEventListener('load', function (params) {
 
     function showForecast(fetchdata) {
         let data = fetchdata;
+        
 
     }
 

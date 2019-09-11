@@ -1,19 +1,26 @@
-window.addEventListener('load', function(params){
+window.addEventListener('load', function (params) {
+    // In local storage there is url with current search. Key is 'url' 
     const localStorageUrl = localStorage.getItem('url');
-    console.log(localStorageUrl);
+    // Amount of forecast is set to 40. Why? Because. That's why.
+    const forecastCounter = 40;
 
+    function showForecast(fetchdata) {
+        let data = fetchdata;
 
-    function fetchForecast(url, degrees) {
+    }
+
+    function fetchForecast(url) {
         fetch(url)
             .then(response => {
                 return response.json();
             })
             .then(function (fetchdata) {
-                showResults(fetchdata, degrees, url)
+                showForecast(fetchdata)
             })
             .catch(error => {
                 alert('Something went wrong :( Hope that it is sunny!');
                 console.log(error);
             });
     }
+    fetchForecast(localStorageUrl);
 })

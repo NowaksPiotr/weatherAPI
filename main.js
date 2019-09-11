@@ -8,12 +8,12 @@ window.addEventListener('load', function (params) {
         let chosenCity = document.querySelector('.city__name__input').value ? document.querySelector('.city__name__input')
             .value : 'Poznań';
         let degrees = document.getElementById('temperature').value;
-        let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=' + forecastCount + '&units=' + degrees
-            + '&appid=' + key;
+        let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=' +
+            forecastCount + '&units=' + degrees + '&appid=' + key;
         fetchForecast(url, degrees);
     });
 
-    function showResults(data, degrees, url) {
+    function showResult(data, degrees, url) {
         if (data.cod === "200") {
             console.log('Works fine!');
             const currentWeather = document.getElementById('current__weather');
@@ -132,14 +132,13 @@ window.addEventListener('load', function (params) {
         }
     }
 
-
     function fetchForecast(url, degrees) {
         fetch(url)
             .then(response => {
                 return response.json();
             })
             .then(function (fetchdata) {
-                showResults(fetchdata, degrees, url)
+                showResult(fetchdata, degrees, url)
             })
             .catch(error => {
                 alert('Something went wrong :( Hope that it is sunny!');

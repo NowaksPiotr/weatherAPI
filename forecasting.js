@@ -1,12 +1,18 @@
 window.addEventListener('load', function (params) {
     // In local storage there is url with current search. Key is 'url' 
     const localStorageUrl = localStorage.getItem('url');
-    // Amount of forecast is set to 40. Why? Because. That's why.
-    const forecastCounter = 40;
 
     function showForecast(fetchdata) {
+        const resultsSection = document.querySelector('.forecast__tiles');
         let data = fetchdata;
-        
+
+        while (resultsSection.firstChild) {
+            resultsSection.removeChild(resultsSection.firstChild);
+        }
+        // FOR loop for creating tiles with forecast.
+        for (let i = 1; i <= data.cnt; i++) {
+            
+        }
 
     }
 

@@ -1,6 +1,7 @@
 window.addEventListener('load', function (params) {
     // In local storage there is url with current search. Key is 'url' 
     const localStorageUrl = localStorage.getItem('url');
+    const tilesContainer = document.querySelector('.forecast__tiles');
 
     function showForecast(fetchdata) {
         const resultsSection = document.querySelector('.forecast__tiles');
@@ -11,7 +12,7 @@ window.addEventListener('load', function (params) {
         }
         // FOR loop for creating tiles with forecast.
         for (let i = 1; i <= data.cnt; i++) {
-            
+            let 
         }
 
     }

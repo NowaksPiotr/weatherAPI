@@ -42,15 +42,32 @@ window.addEventListener('load', function (params) {
                 let humidityElement = document.createElement('p');
                 let pressureElement = document.createElement('p');
 
-                // Setting classes to the created elements
+                // Setting classes and attributes to the created elements
 
-                tileWrapper.setAttribute('class', 'tile__wrapper');
-                dateAndHourWrapperElement.setAttribute('class', 'dAh__wrapper');
-                detailsWrapper.setAttribute('class', 'details__wrapper');
-                dateAndHourElement.setAttribute('class', 'dAh__element');
+                tileWrapper.setAttribute('class', 'tile__wrappers');
+                dateAndHourWrapperElement.setAttribute('class', 'dAh__wrappers');
+                detailsWrapper.setAttribute('class', 'details__wrappers');
+                dateAndHourElement.setAttribute('class', 'dAh__elements');
                 iconImgElement.setAttribute('class', 'icon');
-                console.log(data.list[i].weather[0].icon);
-                // iconImgElement.setAttribute('src', 'assets/img/' + data.list[i].weather[0].icon + '.png');
+                tempElement.setAttribute('class', 'temp__elements');
+                humidityElement.setAttribute('class', 'humidity__elements');
+                pressureElement.setAttribute('class', 'pressure_elements');
+
+                // Ceiling temperatures
+
+                let tempCeiled = Math.ceil(data.list[i].main.temp);
+
+                // Adding data to created elements
+
+                dateAndHourElement.innerHTML = data.list[i].dt_txt;
+                iconImgElement.setAttribute('src', 'assets/img/' + data.list[i].weather[0].icon + '.png');
+                tempElement.innerHTML = tempCeiled;
+                pressureElement.innerHTML = data.list[i].main.pressure + 'hPa';
+                humidityElement.innerHTML = data.list[i].main.humidity + '%';
+
+                // Printing data on screen
+
+                
             }
 
         }

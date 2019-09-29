@@ -24,11 +24,33 @@ window.addEventListener('load', function (params) {
         resultsSection.append(cityNameWrapperElement);
         cityNameWrapperElement.append(chosenCityElement);
 
-
+        // FOR loop for creating tiles with forecast.
         if (data.cod === '200') {
-            // FOR loop for creating tiles with forecast.
-            for (let i = 1; i <= data.cnt; i++) {
+            for (let i = 1; i < data.cnt; i++) {
+                // Creating HTML elements for forecast
+                // Creating wrappers for elements
 
+                let tileWrapper = document.createElement('div');
+                let dateAndHourWrapperElement = document.createElement('div');
+                let detailsWrapper = document.createElement('div');
+
+                // Creating elements to put in wrapper elements
+
+                let dateAndHourElement = document.createElement('p');
+                let iconImgElement = document.createElement('img');
+                let tempElement = document.createElement('p');
+                let humidityElement = document.createElement('p');
+                let pressureElement = document.createElement('p');
+
+                // Setting classes to the created elements
+
+                tileWrapper.setAttribute('class', 'tile__wrapper');
+                dateAndHourWrapperElement.setAttribute('class', 'dAh__wrapper');
+                detailsWrapper.setAttribute('class', 'details__wrapper');
+                dateAndHourElement.setAttribute('class', 'dAh__element');
+                iconImgElement.setAttribute('class', 'icon');
+                console.log(data.list[i].weather[0].icon);
+                // iconImgElement.setAttribute('src', 'assets/img/' + data.list[i].weather[0].icon + '.png');
             }
 
         }

@@ -10,11 +10,28 @@ window.addEventListener('load', function (params) {
         while (resultsSection.firstChild) {
             resultsSection.removeChild(resultsSection.firstChild);
         }
-        // FOR loop for creating tiles with forecast.
-        for (let i = 1; i <= data.cnt; i++) {
-            let 
-        }
+        // Creating city name bar
+        let cityNameWrapperElement = document.createElement('div');
+        cityNameWrapperElement.setAttribute('class', 'city__name__wrapper');
 
+        let chosenCityElement = document.createElement('h2');
+        chosenCityElement.setAttribute('class', 'chosen__city');
+
+        let cityName = data.city.name;
+
+        chosenCityElement.innerHTML = cityName;
+
+        resultsSection.append(cityNameWrapperElement);
+        cityNameWrapperElement.append(chosenCityElement);
+
+
+        if (data.cod === '200') {
+            // FOR loop for creating tiles with forecast.
+            for (let i = 1; i <= data.cnt; i++) {
+
+            }
+
+        }
     }
 
     function fetchForecast(url) {

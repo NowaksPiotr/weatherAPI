@@ -4,11 +4,10 @@ window.addEventListener('load', function (params) {
     const tilesContainer = document.querySelector('.forecast__tiles');
 
     function showForecast(fetchdata) {
-        const resultsSection = document.querySelector('.forecast__tiles');
         let data = fetchdata;
 
-        while (resultsSection.firstChild) {
-            resultsSection.removeChild(resultsSection.firstChild);
+        while (tilesContainer.firstChild) {
+            tilesContainer.removeChild(tilesContainer.firstChild);
         }
         // Creating city name bar
         let cityNameWrapperElement = document.createElement('div');
@@ -21,7 +20,7 @@ window.addEventListener('load', function (params) {
 
         chosenCityElement.innerHTML = cityName;
 
-        resultsSection.append(cityNameWrapperElement);
+        tilesContainer.append(cityNameWrapperElement);
         cityNameWrapperElement.append(chosenCityElement);
 
         // FOR loop for creating tiles with forecast.
@@ -67,7 +66,15 @@ window.addEventListener('load', function (params) {
 
                 // Printing data on screen
 
-                
+                tilesContainer.append(tileWrapper);
+                tilesContainer.append(dateAndHourWrapperElement);
+                tilesContainer.append(detailsWrapper);
+
+                dateAndHourWrapperElement.append(dateAndHourElement);
+                detailsWrapper.append(iconImgElement);
+                detailsWrapper.append(tempElement);
+                detailsWrapper.append(pressureElement);
+                detailsWrapper.append(humidityElement);
             }
 
         }

@@ -11,10 +11,10 @@ window.addEventListener('load', function (params) {
         }
         // Creating city name bar
         let cityNameWrapperElement = document.createElement('div');
-        cityNameWrapperElement.setAttribute('class', 'city__name__wrapper');
+        cityNameWrapperElement.setAttribute('class', 'fCity__name__wrapper');
 
         let chosenCityElement = document.createElement('h2');
-        chosenCityElement.setAttribute('class', 'chosen__city');
+        chosenCityElement.setAttribute('class', 'fChosen__city');
 
         let cityName = data.city.name;
 
@@ -67,8 +67,8 @@ window.addEventListener('load', function (params) {
                 // Printing data on screen
 
                 tilesContainer.append(tileWrapper);
-                tilesContainer.append(dateAndHourWrapperElement);
-                tilesContainer.append(detailsWrapper);
+                tileWrapper.append(dateAndHourWrapperElement);
+                tileWrapper.append(detailsWrapper);
 
                 dateAndHourWrapperElement.append(dateAndHourElement);
                 detailsWrapper.append(iconImgElement);

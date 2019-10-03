@@ -1,21 +1,48 @@
-.title__wrappers{
-
-}
-.dAh__wrappers{
-
-}
-.details__wrappers{
-
-}
-.dAh__elements{
-
-}
-.temp__elements{
-
-}
-.humidity__elements{
-
-}
-.pressure_elements{
+@media (max-width: 567px){
     
+    .forecast__tiles{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    .fCity__name__wrapper,{
+        background-color: rgba(165, 193, 253, 0.5);
+    }
+    .fCity__name__wrapper,
+    .dAh__elements{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .fChosen__city{
+    }
+
+    .tile__wrappers{
+        margin-top: .2em;
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .dAh__wrappers{
+
+    }
+
+    .details__wrappers{
+
+    } 
+
+    .dAh__elements{
+
+    }
+
+    .temp__elements{
+
+    }
+
+    .humidity__elements{
+
+    }
+
+    .pressure_elements{
+
+    }
 }

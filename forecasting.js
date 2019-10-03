@@ -47,10 +47,10 @@ window.addEventListener('load', function (params) {
                 dateAndHourWrapperElement.setAttribute('class', 'dAh__wrappers');
                 detailsWrapper.setAttribute('class', 'details__wrappers');
                 dateAndHourElement.setAttribute('class', 'dAh__elements');
-                iconImgElement.setAttribute('class', 'icon');
+                iconImgElement.setAttribute('class', 'fIcon');
                 tempElement.setAttribute('class', 'temp__elements');
                 humidityElement.setAttribute('class', 'humidity__elements');
-                pressureElement.setAttribute('class', 'pressure_elements');
+                pressureElement.setAttribute('class', 'pressure__elements');
 
                 // Ceiling temperatures
 
@@ -67,10 +67,10 @@ window.addEventListener('load', function (params) {
                 // Printing data on screen
 
                 tilesContainer.append(tileWrapper);
-                tileWrapper.append(dateAndHourWrapperElement);
                 tileWrapper.append(detailsWrapper);
 
                 dateAndHourWrapperElement.append(dateAndHourElement);
+                detailsWrapper.append(dateAndHourWrapperElement);
                 detailsWrapper.append(iconImgElement);
                 detailsWrapper.append(tempElement);
                 detailsWrapper.append(pressureElement);

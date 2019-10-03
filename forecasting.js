@@ -86,7 +86,7 @@ window.addEventListener('load', function (params) {
                 return response.json();
             })
             .then(function (fetchdata) {
-                showForecast(fetchdata)
+                showForecast(fetchdata);
             })
             .catch(error => {
                 alert('Something went wrong :( Hope that it is sunny!');

@@ -35,7 +35,7 @@ body{
     }
     .city__name__input, .check__it__out{
         border-radius: 25px;
-        padding-left: 1em;
+        padding-left: .8em;
         padding-top: .4em;
         padding-bottom: .4em;
         outline: none;
@@ -136,26 +136,3 @@ body{
         display: none;
     }
 }
-/******************** ANIMATIONS BELOW ****************************/
-/******************* Background blob animation *******************/
-/**************** I don't know if I need it... *******************/
-/* .blob {
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: rgba(255,255,255,0.2);
-    width: 30vmax;
-    z-index: -1;
-    animation: move 20s ease-in-out infinite;
-    transform-origin: 50% 50%;
-  }
-  
-  @keyframes move {
-    0%   { transform: scale(1)   translate(10px, -30px); }
-    38%  { transform: scale(0.6, 1) translate(80vw, 30vh) rotate(160deg); }
-    40%  { transform: scale(0.6, 1) translate(80vw, 30vh) rotate(160deg); }
-    78%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
-    80%  { transform: scale(1.8) translate(0vw, 50vh) rotate(-20deg); }
-    100% { transform: scale(1)   translate(10px, -30px); }
-  } */
-  /******************************************************************/

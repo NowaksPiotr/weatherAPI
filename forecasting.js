@@ -32,6 +32,10 @@ window.addEventListener('load', function (params) {
                 let tileWrapper = document.createElement('div');
                 let dateAndHourWrapperElement = document.createElement('div');
                 let detailsWrapper = document.createElement('div');
+                let iconWrapper = document.createElement('div');
+                let tempWrapper = document.createElement('div');
+                let humWrapper = document.createElement('div');
+                let pressWrapper = document.createElement('div');
 
                 // Creating elements to put in wrapper elements
 
@@ -46,6 +50,10 @@ window.addEventListener('load', function (params) {
                 tileWrapper.setAttribute('class', 'tile__wrappers');
                 dateAndHourWrapperElement.setAttribute('class', 'dAh__wrappers');
                 detailsWrapper.setAttribute('class', 'details__wrappers');
+                iconWrapper.setAttribute('class', 'icon__wrapper');
+                tempWrapper.setAttribute('class', 'temp__wrapper');
+                humWrapper.setAttribute('class', 'hum__wrapper');
+                pressWrapper.setAttribute('class', 'press__wrapper');
                 dateAndHourElement.setAttribute('class', 'dAh__elements');
                 iconImgElement.setAttribute('class', 'fIcon');
                 tempElement.setAttribute('class', 'temp__elements');
@@ -68,13 +76,17 @@ window.addEventListener('load', function (params) {
 
                 tilesContainer.append(tileWrapper);
                 tileWrapper.append(detailsWrapper);
+                iconWrapper.append(iconImgElement);
+                tempWrapper.append(tempElement);
+                pressWrapper.append(pressureElement);
+                humWrapper.append(humidityElement);
 
                 dateAndHourWrapperElement.append(dateAndHourElement);
                 detailsWrapper.append(dateAndHourWrapperElement);
-                detailsWrapper.append(iconImgElement);
-                detailsWrapper.append(tempElement);
-                detailsWrapper.append(pressureElement);
-                detailsWrapper.append(humidityElement);
+                detailsWrapper.append(iconWrapper);
+                detailsWrapper.append(tempWrapper);
+                detailsWrapper.append(pressWrapper);
+                detailsWrapper.append(humWrapper);
             }
 
         }

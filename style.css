@@ -1,5 +1,5 @@
 html{
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
     background-attachment: fixed;

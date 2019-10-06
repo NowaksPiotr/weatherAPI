@@ -2,12 +2,33 @@ window.addEventListener('load', function (params) {
     // In local storage there is url with current search. Key is 'url' 
     const localStorageUrl = localStorage.getItem('url');
     const tilesContainer = document.querySelector('.forecast__tiles');
+    const key = '174be33436b5ac8a0340d573ab8f6d96';
+    const check_btn = document.getElementById('check_btn');
+    const forecastCount = 40;
+    const localStorageDeg = localStorage.getItem('deg');
 
-    function showForecast(fetchdata) {
+
+    check_btn.addEventListener('click', function (e) {
+        localStorage.clear();
+        let chosenCity = document.querySelector('.city__name__input').value ? document.querySelector('.city__name__input')
+            .value : 'Poznań';
+        let degrees = document.getElementById('temperature').value;
+        let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=' +
+            forecastCount + '&units=' + degrees + '&appid=' + key;
+        fetchForecast(url, degrees);
+    });
+
+    function showForecast(fetchdata, degrees) {
         let data = fetchdata;
 
         while (tilesContainer.firstChild) {
             tilesContainer.removeChild(tilesContainer.firstChild);
+        }
+        // Checking units format
+        if (localStorageDeg == undefined) {
+            var degreeUnits = degreeUnit(degrees);
+        } else {
+            var degreeUnits = localStorageDeg;
         }
         // Creating city name bar
         let cityNameWrapperElement = document.createElement('div');
@@ -68,7 +89,7 @@ window.addEventListener('load', function (params) {
 
                 dateAndHourElement.innerHTML = data.list[i].dt_txt;
                 iconImgElement.setAttribute('src', 'assets/img/' + data.list[i].weather[0].icon + '.png');
-                tempElement.innerHTML = tempCeiled;
+                tempElement.innerHTML = tempCeiled + degreeUnits;
                 pressureElement.innerHTML = data.list[i].main.pressure + 'hPa';
                 humidityElement.innerHTML = data.list[i].main.humidity + '%';
 
@@ -92,18 +113,31 @@ window.addEventListener('load', function (params) {
         }
     }
 
-    function fetchForecast(url) {
+    function degreeUnit(degrees) {
+        switch (degrees) {
+            case 'metric':
+                return '°C';
+                break;
+            case 'imperial':
+                return '°F';
+                break;
+        }
+    }
+
+    function fetchForecast(url, degrees) {
         fetch(url)
             .then(response => {
                 return response.json();
             })
             .then(function (fetchdata) {
-                showForecast(fetchdata);
+                showForecast(fetchdata, degrees);
             })
             .catch(error => {
                 alert('Something went wrong :( Hope that it is sunny!');
                 console.log(error);
             });
     }
-    fetchForecast(localStorageUrl);
+    if (localStorage.length != 0) {
+        fetchForecast(localStorageUrl);
+    }
 })

@@ -26,6 +26,8 @@ window.addEventListener('load', function (params) {
             let degreeUnits = degreeUnit(degrees);
             let cityName = data.city.name;
 
+            localStorage.setItem('deg', degreeUnits);
+
             // ***** Creating HTML elements and setting their attributes for styling **** //
 
             let chosenCityElement = document.createElement('h2');

@@ -145,7 +145,7 @@ window.addEventListener('load', function (params) {
         fetchForecast(localStorageUrl);
     }
 
-    window.addEventListener('scroll', function onScroll(e) {
+    window.addEventListener('scroll', function onScroll() {
         let cityNameBar = document.querySelector('.fCity__name__wrapper');
         if (cityNameBar != undefined) {
             let position = cityNameBar.offsetTop;

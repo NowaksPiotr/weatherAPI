@@ -1,7 +1,8 @@
 html{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+    background-attachment: fixed;
 }
 body{
     height: 100%;
@@ -125,8 +126,12 @@ body{
     }
     .links{
         text-decoration: none;
+        text-align: center;
         color: inherit;
         cursor: pointer;
+        position: absolute;
+        bottom:0;
+        width: 100%;
     }
     .forecast_information_wrapper{
         background-color: rgba(56,163,209, 0.5);

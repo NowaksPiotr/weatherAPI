@@ -8,7 +8,6 @@ window.addEventListener('load', function (params) {
 
 
     check_btn.addEventListener('click', function (e) {
-        localStorage.clear();
         let chosenCity = document.querySelector('.city__name__input').value ? document.querySelector('.city__name__input')
             .value : 'Poznań';
         let degrees = document.getElementById('temperature').value;
@@ -29,7 +28,7 @@ window.addEventListener('load', function (params) {
         if (localStorageDeg == null) {
             var degreeUnits = degreeUnit(degrees);
             console.log('W ifie: ' + degreeUnits);
-        }else{
+        } else {
             console.log(localStorageDeg);
             var degreeUnits = localStorageDeg;
             console.log('W elsie: ' + degreeUnits);
@@ -47,7 +46,6 @@ window.addEventListener('load', function (params) {
 
         tilesContainer.append(cityNameWrapperElement);
         cityNameWrapperElement.append(chosenCityElement);
-
         // FOR loop for creating tiles with forecast.
         if (data.cod === '200') {
             for (let i = 0; i < data.cnt; i++) {
@@ -113,11 +111,9 @@ window.addEventListener('load', function (params) {
                 detailsWrapper.append(pressWrapper);
                 detailsWrapper.append(humWrapper);
             }
-
         }
         localStorage.clear();
     }
-
     function degreeUnit(degrees) {
         switch (degrees) {
             case 'metric':
@@ -142,7 +138,22 @@ window.addEventListener('load', function (params) {
                 console.log(error);
             });
     }
+
+
+
     if (localStorage.length != 0) {
         fetchForecast(localStorageUrl);
     }
+
+    window.addEventListener('scroll', function onScroll(e) {
+        let cityNameBar = document.querySelector('.fCity__name__wrapper');
+        if (cityNameBar != undefined) {
+            let position = cityNameBar.offsetTop;
+            if (window.pageYOffset > position) {
+                cityNameBar.classList.add('fCity__name__wrapper__fixed');
+            }else{
+                cityNameBar.classList.remove('fCity__name__wrapper__fixed')
+            }
+        }
+    })
 })

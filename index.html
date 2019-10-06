@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forecast with charts.js</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-
-<body>
-    <div class="wrapper">
-        <section class="general">
-            <header class="site__name">
-                <h1 class="name">weatherAPP</h1>
-            </header>
-            <main>
-                <div class="general__wrapper">
-                    <div class="city_check_wrapper">
-                        <form class="city_check">
-                            <input type="text" class="city__name__input" placeholder="City name...">
-                            <select name="temps" id="temperature">
-                                <option value="metric" disabled selected>Celsius</option>
-                                <option value="imperial">Fahrenheit</option>
-                                <option value="metric">Celsius</option>
-                            </select>
-                            <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
-                        </form>
-                    </div>
-                    <section id="current__weather"></section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Forecast with charts.js</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body class="wrapper">
+        <header class="header">
+            <h1 class="header__title">weatherAPP</h1>
+        </header>
+        <main class="forecast">
+            <section class="forecast__selection">
+                <form>
+                    <!-- a gdzie label? -->
+                    <input type="text" class="forecast__city-input" placeholder="City name..."/>
+                    <!-- a gdzie label? -->
+                    <select name="temps" id="temperature"/>
+                        <option value="metric" disabled selected>Celsius</option>
+                        <option value="imperial">Fahrenheit</option>
+                        <option value="metric">Celsius</option>
+                    </select>
+                    <button class="forecast__button" id="check_btn" type="button">Check it out!</button>
+                </form>
+            </section>
+            <section class="forecast__information information" id="current__weather">
+            <!--
+                i tutaj 
+                -->
+                <div class="information__city-name"></div>
+                <div class="information__temp-and-icon"></div>
+                <div class="information__humidity"></div>
+                <div class="information__temperature">
+                    <div class="information__temperature-max"></div>
+                    <div class="information__temperature-min"></div>
                 </div>
-            </main>
-        </section>
-        <section class="forecast__and__chart">
-            <div class="forecast_information_wrapper">
+                <div class="information__pressure"></div>
+                <div class="information__wind-speed"></div>
+
+                <!--
+             -->
+            </section>
+            <div class="forecast__more">
                 <a class="links" href="forecast.html">
                     <p class="forecast_information">
                         More
@@ -47,9 +56,7 @@
                     </p>
                 </div>
             </a>
-        </section>
-    </div>
-    <script src="main.js"></script>
-</body>
-
+        </main>
+        <script src="main.js"></script>
+    </body>
 </html>

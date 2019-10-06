@@ -5,7 +5,6 @@ window.addEventListener('load', function (params) {
     const key = '174be33436b5ac8a0340d573ab8f6d96';
     const check_btn = document.getElementById('check_btn');
     const forecastCount = 40;
-    const localStorageDeg = localStorage.getItem('deg');
 
 
     check_btn.addEventListener('click', function (e) {
@@ -25,10 +24,15 @@ window.addEventListener('load', function (params) {
             tilesContainer.removeChild(tilesContainer.firstChild);
         }
         // Checking units format
-        if (localStorageDeg == undefined) {
+        let localStorageDeg = localStorage.getItem('deg');
+        console.log(localStorageDeg);
+        if (localStorageDeg == null) {
             var degreeUnits = degreeUnit(degrees);
-        } else {
+            console.log('W ifie: ' + degreeUnits);
+        }else{
+            console.log(localStorageDeg);
             var degreeUnits = localStorageDeg;
+            console.log('W elsie: ' + degreeUnits);
         }
         // Creating city name bar
         let cityNameWrapperElement = document.createElement('div');
@@ -46,7 +50,7 @@ window.addEventListener('load', function (params) {
 
         // FOR loop for creating tiles with forecast.
         if (data.cod === '200') {
-            for (let i = 1; i < data.cnt; i++) {
+            for (let i = 0; i < data.cnt; i++) {
                 // Creating HTML elements for forecast
                 // Creating wrappers for elements
 
@@ -111,6 +115,7 @@ window.addEventListener('load', function (params) {
             }
 
         }
+        localStorage.clear();
     }
 
     function degreeUnit(degrees) {

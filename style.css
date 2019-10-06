@@ -128,9 +128,6 @@ body{
         text-align: center;
         color: inherit;
         cursor: pointer;
-        position: absolute;
-        bottom:0;
-        width: 100%;
     }
     .forecast_information_wrapper{
         background-color: rgba(56,163,209, 0.5);

@@ -1,13 +1,14 @@
 html{
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
-    background-attachment: fixed;
+
 }
 body{
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+    background-attachment: fixed;
 }
 /* Media queries for all up to 567px */
 @media (max-width: 567px){

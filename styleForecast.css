@@ -43,7 +43,7 @@
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 20% 40% 40%;
-        grid-gap: 0.3em;
+        /* grid-gap: 0.3em; */
     }
 
     .dAh__wrappers{

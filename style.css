@@ -1,14 +1,16 @@
 html{
-
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
-body{
+body, .wrapper{
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
-    background-attachment: fixed;
 }
 /* Media queries for all up to 567px */
 @media (max-width: 567px){
@@ -16,6 +18,8 @@ body{
         margin: 0;
         padding: 0;
         font-size: 1.5em;
+        height: 100%;
+        width: 100%;
     }
     
     .site__name{
@@ -61,7 +65,8 @@ body{
 
     #current__weather{
         display: grid;
-        grid-gap: 0.2em;
+        /* Grid gap makes it wooble on mobile - have to fix this later */
+        /* grid-gap: 0.2em; */
         grid-template-columns: 50% 50%;
         text-transform: uppercase;
     }
@@ -105,7 +110,8 @@ body{
     .inner_tmin_tmax_wrapper{
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-gap: 0.2em;
+        /* Grid gap makes it wooble on mobile - have to fix this later */
+        /* grid-gap: 0.2em; */
     }
     .humidity,
     .tmin,
@@ -131,7 +137,7 @@ body{
         cursor: pointer;
     }
     .forecast_information_wrapper{
-        background-color: rgba(56,163,209, 0.5);
+        background-color: rgba(56,163,209, 0.2);
     }
     .chart_wrapper{
         background-color: aqua;

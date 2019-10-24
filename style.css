@@ -66,8 +66,9 @@ body, .wrapper{
     #current__weather{
         display: grid;
         /* Grid gap makes it wooble on mobile - have to fix this later */
-        /* grid-gap: 0.2em; */
-        grid-template-columns: 50% 50%;
+        grid-gap: 0.2em;
+        grid-template-columns: 49% 49%;
+        justify-content: center;
         text-transform: uppercase;
     }
     .city__name__wrapper{
@@ -110,8 +111,6 @@ body, .wrapper{
     .inner_tmin_tmax_wrapper{
         display: grid;
         grid-template-columns: 50% 50%;
-        /* Grid gap makes it wooble on mobile - have to fix this later */
-        /* grid-gap: 0.2em; */
     }
     .humidity,
     .tmin,

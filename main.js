@@ -87,8 +87,8 @@ window.addEventListener('load', function (params) {
             iconImgElement.setAttribute('src', 'assets/img/' + data.list[0].weather[0].icon + '.png');
             tempElement.innerHTML = tempCeiled + degreeUnits;
             humidityElement.innerHTML = 'humidity' + '<br>' + data.list[0].main.humidity + '%';
-            tMinElement.innerHTML = 'min. temperature' + '<br>' + minTempCeiled + degreeUnits;
-            tMaxElement.innerHTML = 'max. temperature ' + '<br>' + maxTempCeiled + degreeUnits;
+            tMinElement.innerHTML = 'min' + ' ' + minTempCeiled + degreeUnits;
+            tMaxElement.innerHTML = 'max ' + ' ' + maxTempCeiled + degreeUnits;
             pressureElement.innerHTML = data.list[0].main.pressure + ' hPa';
             windSpeedElement.innerHTML = 'Wind speed:' + '<br>' + data.list[0].wind.speed + ' km/h';
 

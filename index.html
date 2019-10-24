@@ -16,10 +16,11 @@
                 <h1 class="name">weatherAPP</h1>
             </header>
             <main>
-                <div class="general__wrapper">
                     <div class="city_check_wrapper">
                         <form class="city_check">
-                            <input type="text" class="city__name__input" placeholder="City name...">
+                            <label for="city__name">
+                            <input id="city__name"type="text" class="city__name__input" placeholder="City name...">
+                            </label>
                             <select name="temps" id="temperature">
                                 <option value="metric" disabled selected>Celsius</option>
                                 <option value="imperial">Fahrenheit</option>
@@ -28,6 +29,7 @@
                             <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
                         </form>
                     </div>
+                <div class="general__wrapper">
                     <section id="current__weather"></section>
                 </div>
             </main>

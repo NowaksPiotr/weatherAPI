@@ -132,6 +132,9 @@
         text-transform: uppercase;
         margin-top: 0.2em;
         padding: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
     .links{
         text-decoration: none;

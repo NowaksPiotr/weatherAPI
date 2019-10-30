@@ -1,12 +1,14 @@
 html{
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
-    background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     margin: 0;
     padding: 0;
 }
-body, .wrapper{
+body{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+    background-attachment: fixed;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -14,6 +16,11 @@ body, .wrapper{
 }
 /* Media queries for all up to 567px */
 @media (max-width: 567px){
+    html{
+        background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+        position: fixed;
+        z-index: -9999;
+    }
     body{
         margin: 0;
         padding: 0;

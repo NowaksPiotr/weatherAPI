@@ -20,7 +20,6 @@ body{
         background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
         background-repeat: no-repeat;
         background-size: cover;
-        position: fixed;
         z-index: -9999;
         margin: 0;
         padding: 0;

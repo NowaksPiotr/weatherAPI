@@ -122,6 +122,133 @@
     .wind_speed{
         text-align: center;
     }
+}
+    /* Media queries for min. device width of 568px */
+
+    @media (min-width: 568px){
+           /* Below class is ONLY for mobile background fixed image!!! */
+    .background{
+        background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* Above class is ONLY for mobile background fixed image!!! */
+    
+    body{
+        /* background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -9999; */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+    }
+    
+    .site__name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .name{
+        letter-spacing: .3em;
+        padding: 0;
+    }
+    .city_check{
+        margin: 0;
+        display: flex;
+        padding-top: .5em;
+        margin-bottom: .5em;
+        justify-content: space-around;
+    }
+    .city__name__input, .check__it__out{
+        border-radius: 25px;
+        padding-left: .8em;
+        padding-top: .4em;
+        padding-bottom: .4em;
+        outline: none;
+        border: 1px solid rgb(0,0,0);
+    }
+    .city__name__input{
+        width: 10em;
+        font-size: .5em;
+    }
+    .check__it__out{
+        margin-left: .2em;
+        padding-right: 1em;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    #temperature{
+        width: 8em;
+        text-align: center;
+    }
+
+    /* Current weather section */
+
+    #current__weather{
+        display: grid;
+        /* Grid gap makes it wooble on mobile - have to fix this later */
+        grid-gap: 0.2em;
+        grid-template-columns: 49% 49%;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    .city__name__wrapper{
+        grid-column: 1/3;
+        background-color: rgba(165, 193, 253, 0.5);
+    }
+    .chosen__city,
+    .icon_wrapper,
+    .temp, .humidity_wrapper,
+    .tmin, .tmax,
+    .wind_speed_wrapper,
+    .pressure_wrapper,
+    .forecast_information_wrapper,
+    .chart_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .temp_and_icon_wrapper,
+    .humidity_wrapper,
+    .tmax_and_tmin_wrapper,
+    .pressure_wrapper,
+    .wind_speed_wrapper{
+        background-color: rgba(255, 255, 255, 0.5);
+
+    }
+    .temp_and_icon_wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .icon{
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+    }
+    .tmax_and_tmin_wrapper{
+        grid-column: 1/3;
+    }
+    .inner_tmin_tmax_wrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .humidity,
+    .tmin,
+    .tmax,
+    .wind_speed{
+        text-align: center;
+    } 
+    }
 
     /*************************************************************/
     /****************** Forecast and chart links *****************/

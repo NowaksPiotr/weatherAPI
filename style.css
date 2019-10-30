@@ -1,10 +1,24 @@
 /* Media queries for all up to 567px */
 @media (max-width: 567px){
-    body{
+    /* Below class is ONLY for mobile background fixed image!!! */
+    .background{
         background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: -9999;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* Above class is ONLY for mobile background fixed image!!! */
+    
+    body{
+        /* background-image: linear-gradient(to bottom, rgb(255,255,255) 5%, rgb(56,163,209) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -9999; */
         width: 100%;
         height: 100%;
         margin: 0;

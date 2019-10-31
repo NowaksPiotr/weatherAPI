@@ -13,6 +13,8 @@ window.addEventListener('load', function (params) {
         let degrees = document.getElementById('temperature').value;
         let url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + chosenCity + '&lang=pl&cnt=' +
             forecastCount + '&units=' + degrees + '&appid=' + key;
+            localStorage.clear();
+            localStorage.setItem('url', url);
         fetchForecast(url, degrees);
     });
 
@@ -24,14 +26,10 @@ window.addEventListener('load', function (params) {
         }
         // Checking units format
         let localStorageDeg = localStorage.getItem('deg');
-        console.log(localStorageDeg);
         if (localStorageDeg == null) {
             var degreeUnits = degreeUnit(degrees);
-            console.log('W ifie: ' + degreeUnits);
         } else {
-            console.log(localStorageDeg);
             var degreeUnits = localStorageDeg;
-            console.log('W elsie: ' + degreeUnits);
         }
         // Creating city name bar
         let cityNameWrapperElement = document.createElement('div');
@@ -49,6 +47,7 @@ window.addEventListener('load', function (params) {
         // FOR loop for creating tiles with forecast.
         if (data.cod === '200') {
             for (let i = 0; i < data.cnt; i++) {
+
                 // Creating HTML elements for forecast
                 // Creating wrappers for elements
 
@@ -112,7 +111,7 @@ window.addEventListener('load', function (params) {
                 detailsWrapper.append(humWrapper);
             }
         }
-        localStorage.clear();
+        // localStorage.clear();
     }
     function degreeUnit(degrees) {
         switch (degrees) {

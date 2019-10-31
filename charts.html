@@ -7,9 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Forecast with charts.js</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"></script>
 </head>
 
 <body>
+    <!-- Below div is for fixed background image on mobile only -->
+    <div class="background"></div>
+    <!-- Above div is for fixed background image on mobile only -->
     <div class="wrapper">
         <section class="general">
             <header class="site__name">
@@ -28,4 +32,29 @@
                             <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
                         </form>
                     </div>
-                    <a href="index.html">index</a>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </main>
+        </section>
+        <section class="forecast__and__chart">
+            <a class="links" href="index.html">
+                <div class="forecast_information_wrapper">
+
+                    <p class="forecast_information">
+                        Main
+                    </p>
+                </div>
+            </a>
+            <a class="links" href="forecast.html">
+                <div class="chart_wrapper">
+                    <p class="charts_js">
+                        Forecast
+                    </p>
+                </div>
+            </a>
+        </section>
+    </div>
+    <script src="charts.js"></script>
+</body>
+
+</html>

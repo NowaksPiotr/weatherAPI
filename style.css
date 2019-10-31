@@ -146,7 +146,6 @@
         background-color: rgba(56,163,209, 0.2);
     }
     .chart_wrapper{
-        background-color: aqua;
         display: none;
     }
 }
@@ -295,7 +294,6 @@
         background-color: rgba(56,163,209, 0.2);
     }
     .chart_wrapper{
-        background-color: aqua;
         display: none;
     }
 }

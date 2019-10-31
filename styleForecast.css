@@ -126,11 +126,6 @@ html,body{
         background-color: rgba(255,255,255,0.3);
     }
 
-    .hum__wrapper,
-    .press__wrapper{
-        border-bottom: 3px solid green;
-    }
-
     .details__wrappers{
         display: grid;
         grid-template-columns: 50% 50%;
@@ -255,6 +250,8 @@ html,body{
         grid-column: 1/2;
     }
 }
+
+/* GO TOP BUTTON */
 .go__top{
     display: none;
     position: fixed;
@@ -263,7 +260,7 @@ html,body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: rgba(165, 193, 253, 1);
     font-size: 1em;
     font-weight: bold;
     text-align: center;

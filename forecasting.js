@@ -160,9 +160,11 @@ window.addEventListener('load', function (params) {
         let scrollTop = window.pageYOffset;
         let goTopSpan = document.querySelector('.go__top');
         if(scrollTop > 450){
-            goTopSpan.style.display = 'block'   
+            goTopSpan.style.display = 'block';
+            goTopSpan.classList.add('activeTop');
         }else{
             goTopSpan.style.display = 'none';
+            goTopSpan.classList.remove('activeTop');
         }
         goTopSpan.onclick = function(){
             scrollTo(document.body, 0, 100);

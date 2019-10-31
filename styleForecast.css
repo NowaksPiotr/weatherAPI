@@ -268,3 +268,10 @@ html,body{
     font-weight: bold;
     text-align: center;
 }
+.activeTop{
+    animation: showUP ease 1s;
+}
+@keyframes showUP{
+    0%{opacity: 0}
+    100%{opacity: 1}
+}

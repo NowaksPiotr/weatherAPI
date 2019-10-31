@@ -324,7 +324,11 @@
         padding: 0;
         font-size: 1.5em;
     }
-    
+    .wrapper{
+        display: grid;
+        grid-template-columns: 60% 40%;
+
+    }
     .site__name{
         display: flex;
         justify-content: left;
@@ -426,14 +430,13 @@
     /****************** Forecast and chart links *****************/
 
     .forecast__and__chart{
-        display: grid;
-        grid-template-columns: 100%;
         text-transform: uppercase;
         margin-top: 0.2em;
         padding: 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10em;
     }
     .links{
         text-decoration: none;
@@ -443,8 +446,9 @@
     }
     .forecast_information_wrapper{
         background-color: rgba(56,163,209, 0.2);
+        margin-bottom: .1em;
     }
     .chart_wrapper{
-        background-color: aqua;
+        background-color: rgba(56,163,209, 0.2);        
     }
 }

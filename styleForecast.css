@@ -177,13 +177,13 @@ html,body{
 @media(min-width: 1025px){
     .forecast__tiles{
         display: grid;
-        grid-template-columns: 49% 49%;
+        grid-template-columns: 33% 33% 33%;
         grid-gap: .2em;
         justify-content: center;
     }
     
     .fCity__name__wrapper{
-        grid-column: 1/3;
+        grid-column: 1/4;
         width: 100%;
         background-color: rgba(165, 193, 253, 0.5);
     }
@@ -193,7 +193,6 @@ html,body{
         width: 100%;
         background-color: rgba(165, 193, 253, 1);
         position: fixed;
-        text-align: center;
     }
     .fCity__name__wrapper,
     .dAh__elements,
@@ -211,12 +210,7 @@ html,body{
     .temp__wrapper,
     .press__wrapper,
     .hum__wrapper{
-        background-color: rgba(255,255,255,0.3);
-    }
-
-    .hum__wrapper,
-    .press__wrapper{
-        border-bottom: 3px solid green;
+        background-color: rgba(230,230,230,0.3);
     }
 
     .details__wrappers{
@@ -260,4 +254,21 @@ html,body{
         grid-row:3/4;
         grid-column: 1/2;
     }
+}
+#go__top{
+    /* display: none; */
+}
+.go__top__active{
+    position: fixed;
+    right: 20px;
+    bottom:20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
 }

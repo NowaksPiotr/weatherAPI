@@ -14,7 +14,7 @@
     <!-- Below div is for fixed background image on mobile only -->
     <div class="background"></div>
     <!-- Above div is for fixed background image on mobile only -->
-    <div class="wrapper">
+    <div class="forecast__wrapper">
         <section class="general">
             <header class="site__name">
                 <h1 class="name">weatherAPP</h1>
@@ -34,13 +34,30 @@
                             <button class="check__it__out" id="check_btn" type="button">Check it out!</button>
                         </form>
                     </div>
-                    <a href="index.html">index</a>
                 </div>
             </main>
         </section>
         <section class="forecast__tiles">
         </section>
+        <section class="forecast__and__chart">
+            <a class="links" href="index.html">
+                <div class="forecast_information_wrapper">
+
+                    <p class="forecast_information">
+                        Main
+                    </p>
+                </div>
+            </a>
+            <a class="links" href="charts.html">
+                <div class="chart_wrapper">
+                    <p class="charts_js">
+                        chart
+                    </p>
+                </div>
+            </a>
+        </section>
     </div>
+    <span id="go__top" class="go__top__active">UP</span>
     <script src="forecasting.js"></script>
 </body>
 

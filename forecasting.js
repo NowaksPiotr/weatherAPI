@@ -147,16 +147,25 @@ window.addEventListener('load', function (params) {
 
     window.addEventListener('scroll', function onScroll() {
         let cityNameBar = document.querySelector('.fCity__name__wrapper');
-        let fchosenCity = document.querySelector('.fChosen__city');
         if (cityNameBar != undefined) {
             let position = cityNameBar.offsetTop;
             if (window.pageYOffset > position) {
                 cityNameBar.classList.add('fCity__name__wrapper__fixed');
-                fchosenCity.classList.add('fChosen__city__fixed');
             }else{
                 cityNameBar.classList.remove('fCity__name__wrapper__fixed')
-                fchosenCity.classList.remove('fChosen__city__fixed');
             }
+        }
+    })
+    window.addEventListener('scroll', function goTop(){
+        let scrollTop = window.pageYOffset;
+        let goTopSpan = document.querySelector('.go__top');
+        if(scrollTop > 450){
+            goTopSpan.style.display = 'block'   
+        }else{
+            goTopSpan.style.display = 'none';
+        }
+        goTopSpan.onclick = function(){
+            scrollTo(document.body, 0, 100);
         }
     })
 })
